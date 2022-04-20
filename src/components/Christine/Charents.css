@@ -1,0 +1,109 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   font-family: sans-serif;
+   text-decoration: none; 
+  /* list-style: none; */
+}
+.container{
+  width: 95%;
+  margin: 10px auto;
+}
+.items{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.item2{
+width: 320px;
+height: 1000px;
+border-radius: 15px;
+border-style: outset;
+flex-direction: column;
+align-items: center;
+display: flex;
+padding: 10px;
+justify-content:space-between;
+}
+h1{
+  text-align: center;
+  margin: 40px;
+}
+
+.item1_1{
+  width: 290px;
+  height: 350px;
+  background-image: url("./img/img1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+th{
+  background-color: #DDDDDD;
+  text-align: right;
+  font-size: 14px;
+
+}
+td{
+line-height: 1.3em;
+vertical-align: middle;
+background-color: #eee;
+font-size: 14px;
+}
+
+.item1{
+    width:900px;
+    height: 100vh;
+    line-height: 2rem;
+}
+.img2{
+  width: 25px;
+  height: 25px; 
+  /* background-image: url(./img/Aquote1.png); */
+  background-position: center;
+  background-size: cover;
+  left: 282px;
+  top: 30px;
+  position: relative;
+}
+
+.items2{
+    width: 320px;
+    height: 2000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item3{
+    width: 240px;
+    height: 360px;
+    background-color: rgb(225, 225, 225);
+    padding:10px;
+    margin: 70px 0;
+}
+.item3-1{
+    width: 220px;
+    height: 320px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../Christine/img/img2.jpg");
+}
+.item4{
+    width: 240px;
+    height: 360px;
+    background-color: rgb(225, 225, 225);
+    padding:10px;
+    margin: 50px 0;
+}
+.item4-1{
+    width: 220px;
+    height: 320px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../Christine/img/img3.jpg");
+}
