@@ -1,7 +1,36 @@
+import { Route, Routes, useNavigate } from "react-router-dom";
+import First from "./components/anna/glxavor";
+import Charents from "./components/Christine/Charents";
+import Sahyan from "./components/rima/Sahyan";
+import Sevak from "./components/artur";
+import UserName from "./components/styop";
+
+const arr = [
+  { name: "charenc", path: "charenc" },
+  { name: "viktor hambardzumyan", path: "viktor" },
+  { name: "charenc", path: "charenc" },
+  { name: "charenc", path: "charenc" },
+  { name: "charenc", path: "charenc" },
+];
 function App() {
+  const navigate = useNavigate();
   return (
     <div className="App">
-        this is our application
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div onClick={() => navigate("charenc")}>charenc</div>
+        <div onClick={() => navigate("viktor")}>viktor Hambardzumyan</div>
+        <div onClick={() => navigate("sahyan")}>Sahyan</div>
+        <div onClick={() => navigate("sevak")}>Sevak</div>
+        <div onClick={() => navigate("misak")}>Misak Mecarenc</div>
+      </div>
+      <Routes>
+        <Route path="/" element={<div>this is main component</div>} />
+        <Route path="charenc" element={<Charents />} />
+        <Route path="viktor" element={<First />} />
+        <Route path="sahyan" element={<Sahyan />} />
+        <Route path="sevak" element={<Sevak />} />
+        <Route path="misak" element={<UserName />} />
+      </Routes>
     </div>
   );
 }
