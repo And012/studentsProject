@@ -4,7 +4,7 @@ import Charents from "./components/Christine/Charents";
 import Sahyan from "./components/rima/Sahyan";
 import Sevak from "./components/artur";
 import UserName from "./components/styop";
-
+// inch vor ban
 const arr = [
   { name: "charenc", path: "charenc" },
   { name: "viktor hambardzumyan", path: "viktor" },
