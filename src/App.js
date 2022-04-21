@@ -25,11 +25,11 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<div>this is main component</div>} />
-        <Route path="charenc" element={<Charents />} />
-        <Route path="viktor" element={<First />} />
-        <Route path="sahyan" element={<Sahyan />} />
-        <Route path="sevak" element={<Sevak />} />
-        <Route path="misak" element={<UserName />} />
+        <Route path="charenc/*" element={<Charents />} />
+        <Route path="viktor/*" element={<First />} />
+        <Route path="sahyan/*" element={<Sahyan />} />
+        <Route path="sevak/*" element={<Sevak />} />
+        <Route path="misak/*" element={<UserName />} />
       </Routes>
     </div>
   );
