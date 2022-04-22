@@ -8,18 +8,16 @@ import SahyaniMasin from './SahyaniMasin';
 import Hishatak from './Hishatak';
 
 function Sahyan() {
-
   return (
     <>
      <Routes>
-      {/* <Route path="/" element={<Sahyan />} /> */}
+      <Route path="/" element={<Info />} />
         <Route path="kensagrutyun/*" element={<Kensagrutyun />} />
          <Route path="grakanGorcuneutyun/*" element={<GrakanGorcuneutyun />} />
         <Route path="banastexcutyunner/*" element={<Banastexcutyunner />} />
         <Route path="sahyaniMasin/*" element={<SahyaniMasin />} />
         <Route path="hishatak/*" element={<Hishatak />} />
       </Routes> 
-    <Info />
 </>
   )
 }
