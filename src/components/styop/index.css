@@ -10,8 +10,7 @@
     position: fixed;
     display: flex;
     justify-content: space-between;
-    background-color: rgb(0, 0, 0);
-    top: 0;
+    background-color: rgb(0, 0, 0); 
 }
 
 #logo{
@@ -117,6 +116,7 @@
     text-decoration: none;
     color: #ffffff;
     transition: .5s;
+    font-size: 14px;
 }
 .main-content-right ul li a:hover{
     color: rgb(184, 196, 132);
