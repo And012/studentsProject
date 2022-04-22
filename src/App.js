@@ -3,7 +3,7 @@ import First from "./components/anna/glxavor";
 import Charents from "./components/Christine/Charents";
 import Sahyan from "./components/rima/Sahyan";
 import Sevak from "./components/artur";
-import Mecarenc from "./components/styop";
+import UserName from "./components/styop";
 // inch vor ban
 const arr = [
   { name: "charenc", path: "charenc" },
@@ -29,7 +29,7 @@ function App() {
         <Route path="viktor/*" element={<First />} />
         <Route path="sahyan/*" element={<Sahyan />} />
         <Route path="sevak/*" element={<Sevak />} />
-        <Route path="misak/*" element={<Mecarenc />} />
+        <Route path="misak/*" element={<UserName />} />
       </Routes>
     </div>
   );
