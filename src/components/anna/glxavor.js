@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './style.css';
+import Byurakan from "./byurakan";
 import {Route, Routes , useNavigate} from "react-router-dom";
 import { listChors, listChors1, listChors2, listEreq, listErku, listErku1, listErku2, listErku3, listHing, listMek, listMek1, listMek2, listMek3, listVec, listYot } from "./text";
 
 
-function Victor(){
+
+function Victor(){   
     const navigate = useNavigate()
    return( 
 <>
@@ -14,18 +16,22 @@ function Victor(){
         
             <div>
           <ul>
-            <li><button onClick={()=>{navigate('mek')}}>1. Կենսագրություն</button></li>
-            <li><button onClick={()=>{navigate('erku')}}>2. Գիտական գործունեության հիմնական ուղղությունները</button></li>
-            <li><button onClick={()=>{navigate('ereq')}}>3. Մանկավարժական գործունեություն</button></li>
-            <li><button onClick={()=>{navigate('chors')}}>4. Գիտա-կազմակերպչական գործունեություն</button></li>
-            <li><button onClick={()=>{navigate('hing')}}>5. Հասարակական-քաղաքական գործունեություն</button></li>
-            <li><button onClick={()=>{navigate('vec')}}>6. Անդամակցությունը գիտական կազմակերպություններին</button></li>
-            <li><button onClick={()=>{navigate('yot')}}>7. Պարգևներ և կոչումներ</button></li>
+            <li><a onClick={()=>{ 
+                navigate('mek')   
+             
+              }}>1. Կենսագրություն</a></li>
+            <li><a onClick={()=>{navigate('erku')}}>2. Գիտական գործունեության հիմնական ուղղությունները</a></li>
+            <li><a onClick={()=>{navigate('ereq')}}>3. Մանկավարժական գործունեություն</a></li>
+            <li><a onClick={()=>{navigate('chors')}}>4. Գիտա-կազմակերպչական գործունեություն</a></li>
+            <li><a onClick={()=>{navigate('hing')}}>5. Հասարակական-քաղաքական գործունեություն</a></li>
+            <li><a onClick={()=>{navigate('vec')}}>6. Անդամակցությունը գիտական կազմակերպություններին</a></li>
+            <li><a onClick={()=>{navigate('yot')}}>7. Պարգևներ և կոչումներ</a></li>
+            <li><a onClick={()=>{navigate('byurakan')}}>Բյուրականի աստղադիտարան</a></li>
          
         </ul>
             </div>
     <Routes>
-       <Route path="/" element={<Victor/>}/>
+       <Route path="/" element={<ListNothing/>}/>
        <Route path="mek/*" element={<ListOne/>}/>
        <Route path="erku/*" element={<ListTwo/>}/>
        <Route path="ereq/*" element={<ListThree/>}/>
@@ -33,12 +39,16 @@ function Victor(){
        <Route path="hing/*" element={<ListFive/>}/>
        <Route path="vec/*" element={<ListSix/>}/>
        <Route path="yot/*" element={<ListSeven/>}/>
+       <Route path="byurakan/*" element={<Byurakan/>}/>
    </Routes>
 </div>
+
 </>
    );
 
 }
+
+
 
 function ListOne(){
     return(
@@ -148,6 +158,12 @@ function ListSeven(){
     );
 
 }
+function ListNothing(){
+    return(
+        <></>
+    )
+};
+
 
 
 export default Victor

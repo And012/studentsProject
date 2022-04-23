@@ -9,8 +9,14 @@ ul, li{
 a{
     color: black;
     text-decoration: none;
-    font-size: 18px;
-    
+    font-size: 25px;
+    cursor: pointer;
+}
+#imanalavelin{
+    font-size: 15px;
+    justify-content: center;
+    color: blue;
+    margin: 10px auto;
 }
 #title{
 display: flex;
@@ -35,14 +41,12 @@ margin-top: 20px;
     height: 243px;
 }
 
-button{
-    border: none;
-    background-color: white;
-    font-size: 25px;
-    cursor: pointer;
-    
+#img2{
+    background-image: url(./nkar/nkar2.jpg);
+    width: 200px;
+    height: 243px;
 }
-button:hover{
+a:hover{
     border-bottom: 1px solid black;
 }
 .list{
