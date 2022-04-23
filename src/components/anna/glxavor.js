@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './style.css';
+import './victor.css';
 import Byurakan from "./byurakan";
 import {Route, Routes , useNavigate} from "react-router-dom";
 import { listChors, listChors1, listChors2, listEreq, listErku, listErku1, listErku2, listErku3, listHing, listMek, listMek1, listMek2, listMek3, listVec, listYot } from "./text";
