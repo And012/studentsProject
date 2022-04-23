@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Route, Routes, useNavigate } from 'react-router-dom'
 import {Glxavor,Qaxaqakanutyun,Tntesutyun,Hasarakutyun,Mshakuyt} from './components/menu'
 import './index.css'
-import { Kensahrutyun,Irmasin,Sashxatanq,Banarvest,Grakanutyun } from './text'
+import { Kensahrutyun,Irmasin,Sashxatanq,Banarvest,Grakanutyun,obj } from './text'
 
 export default function Mecarenc(){
     return <div>
@@ -62,12 +62,12 @@ function Main(){
                   </ul>
                   <h2>Միսաք Մեծարենց</h2>
                       <Routes>
-                          <Route path='/' element={<div className='content-cont'>{Kensahrutyun}</div>}/>
-                          <Route path='Kensahrutyun' element={ <div className='content-cont'>{Kensahrutyun}</div>  }/>
-                          <Route path='Irmasin' element={<div className='content-cont'>{Irmasin}</div> }/>
-                          <Route path='Sashxatanq' element={<div className='content-cont'>{Sashxatanq}</div> }/>
-                          <Route path='Banarvest' element={<div className='content-cont'>{Banarvest}</div> }/>
-                          <Route path='Grakanutyun' element={<div className='content-cont'>{Grakanutyun}</div> }/>
+                          <Route path='/' element={<div className='content-cont'>{obj.Kensahrutyun}</div>}/>
+                          <Route path='Kensahrutyun' element={ <div className='content-cont'>{obj.Kensahrutyun}</div>  }/>
+                          <Route path='Irmasin' element={<div className='content-cont'>{obj.Irmasin}</div> }/>
+                          <Route path='Sashxatanq' element={<div className='content-cont'>{obj.Sashxatanq}</div> }/>
+                          <Route path='Banarvest' element={<div className='content-cont'>{obj.Banarvest}</div> }/>
+                          <Route path='Grakanutyun' element={<div className='content-cont'>{obj.Grakanutyun}</div> }/>
                       </Routes>
                 
                 </div>
