@@ -1,4 +1,4 @@
-/* *{
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -12,6 +12,13 @@ a{
     font-size: 18px;
     
 }
+#title{
+display: flex;
+justify-content: center;
+margin-top: 20px;
+ 
+}
+
 .header{
     display: flex;
     flex-direction: row;
@@ -19,6 +26,7 @@ a{
     gap: 30px;
     padding: 20px;
     margin: 20px auto;
+    flex-wrap: wrap;
     
 }
 #img1{
@@ -30,10 +38,23 @@ a{
 button{
     border: none;
     background-color: white;
-    font-size: 18px;
+    font-size: 25px;
     cursor: pointer;
     
 }
 button:hover{
     border-bottom: 1px solid black;
-} */
+}
+.list{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+.xosq{
+    display: flex;
+    font-size: 20px;
+    padding: 30px;
+    margin: 30px;
+}
