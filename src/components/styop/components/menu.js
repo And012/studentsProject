@@ -28,7 +28,9 @@ export function Qaxaqakanutyun(){
 }
 
 export function Tntesutyun(){
-    return<div>Tntesutyun</div>
+    return<div>
+        Tntesutyun
+        </div>
 }
 export function Hasarakutyun(){
     return<div>Hasarakutyun</div>
