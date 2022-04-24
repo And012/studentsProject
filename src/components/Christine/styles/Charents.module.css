@@ -6,11 +6,28 @@
    text-decoration: none; 
   /* list-style: none; */
 }
+.chNav{
+  width: 100%;
+  height: 60px;
+  background-color: #a8d3ff;
+  position: fixed;
+  top: 0;
+  margin: 0 auto;
+}
+.ch_ul{
+  width: 80%;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .container{
   width: 95%;
-  margin: 10px auto;
+  margin: 50px auto;
 }
-.main-item{
+.mainItem{
   width: 100%;
   height: 100vh;
   display: flex;
@@ -19,7 +36,7 @@
 }
 .left{
 width: 320px;
-height: 1000px;
+height: auto;
 border-radius: 15px;
 border-style: outset;
 padding: 10px;
@@ -32,7 +49,7 @@ h1{
 .pic1{
   width: 290px;
   height: 350px;
-  background-image: url("./img/img1.jpg");
+  background-image: url("../img/img1.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -56,7 +73,6 @@ font-size: 14px;
 .img2{
   width: 25px;
   height: 25px; 
-  /* background-image: url(./img/Aquote1.png); */
   background-position: center;
   background-size: cover;
   left: 282px;
@@ -64,7 +80,7 @@ font-size: 14px;
   position: relative;
 }
 
-.left-main{
+.leftMain{
     width: 320px;
     height: 1100px;
 }
@@ -75,16 +91,16 @@ font-size: 14px;
     padding:10px;
     margin: 70px 0;
 }
-.item3-1{
+.item3_1{
     width: 220px;
     height: 320px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../Christine/img/img2.jpg");
+    background-image: url("../img/img2.jpg");
 }
 .bio{
-  height: 60px;
+  height: 100px;
   overflow: hidden;
 }
 .item4{
@@ -94,15 +110,38 @@ font-size: 14px;
     padding:10px;
     margin: 50px 0;
 }
+.header{
+  text-align: center;
+  margin: 15px;
+  color: darkslategray;
+  font-family: cursive;
+  font-size: 30px;
+  background-color: #a8d3ff;
+  padding: 0 10px;
+}
+.branches{
+  text-align: left;
+  color: black;
+  font-family: 'Mardoto-Medium', 'Helvetica', 'Arial', 'sans-serif';
+}
+.td{
+  padding: 5px;
+  line-height: 15px;
+}
+.th{
+  padding: 0 5px;
+  text-align: left;
+  line-height: 15px;
+}
 .item4-1{
     width: 220px;
     height: 320px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../Christine/img/img3.jpg");
+    background-image: url("../img/img3.jpg");
 }
-.main-item a{
+.mainItem a{
   font-size: 13px;
 }
 /* ================================================================================== */

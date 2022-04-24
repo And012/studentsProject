@@ -17,7 +17,7 @@ export function Qaxaqakanutyun(){
     return<div>
         <section className="Qaxaqakanutyun" >
         <div className="slayder" >
-            <div className="slayder-content" style={{backgroundImage:`url(.img/imgslayder/${index}.jpg)`}}>
+            <div className="slayder-content" style={{backgroundImage:`url(../img/imgslayder/${index}.jpg)`}}>
                 <a href="#" className="angle-left" onClick={() =>setindex((prev) =>index - 1)}><i class="fa-solid fa-angle-left"></i></a>
                 <a href="#" className="angle-right" onClick={() =>setindex((prev) => index + 1)}><i class="fa-solid fa-angle-right"></i></a>
             </div>
