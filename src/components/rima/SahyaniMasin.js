@@ -1,5 +1,5 @@
 import React from 'react'
-import './SahyaniMasin.css';
+import styles from './styles/sahyan.module.scss'
 
 function SahyaniMasin() {
   const about5 = <div>
@@ -33,11 +33,16 @@ function SahyaniMasin() {
   </div>
   return (
     <>
-  <div className='container'>
-  <div className='parent5'>
-    <div className='parent5_child1'>{about5}</div>
+  <div className={styles.parent5}>
+
+    <div className={styles.parent5_child1}>
+<div className={styles.left} ><a href='banastexcutyunner/*'><i class="fa-solid fa-circle-arrow-left" ></i></a></div>
+      {about5}
+ <div className={styles.right}><a href='hishatak/*'><i class="fa-solid fa-circle-arrow-right"></i></a></div>
+    
+    </div>
+
   </div>
-</div>
   </>
   )
 }
