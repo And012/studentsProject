@@ -1,5 +1,6 @@
 import { Route, Routes, useNavigate } from "react-router-dom";
-import { listByurakan } from "./text";
+import { Text_BYURAKAN } from "./const.js";
+import styles from "./Victor.module.css"
 
 function Astxaditaran(){
     return(
@@ -15,9 +16,9 @@ function Byurakan(){
     const navigate = useNavigate
     return(
         <>
-        <div className="list">
-            {listByurakan}
-            <a id="imanalavelin" onClick={()=>{navigate('/astx')}}>Իմանալ ավելին</a>
+        <div className={styles.list}>
+            {Text_BYURAKAN}
+            <a className={styles.forMore} onClick={()=>{navigate('/astx')}}>Իմանալ ավելին</a>
         </div>
         </>
     );

@@ -6,26 +6,36 @@
 ul, li{
     list-style: none;
 }
+.list_ul_1{
+    padding: 15px;
+    margin: 15px 150px;
+
+}
+.list_ul_2{
+    padding: 15px;
+    margin: 15px 130px;
+}
+
 a{
     color: black;
     text-decoration: none;
     font-size: 25px;
     cursor: pointer;
 }
-#imanalavelin{
+.forMore{
     font-size: 15px;
     justify-content: center;
     color: blue;
     margin: 10px auto;
 }
-#title{
+.anunAzganun{
 display: flex;
 justify-content: center;
 margin-top: 20px;
  
 }
 
-.header{
+.headEr{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -35,13 +45,13 @@ margin-top: 20px;
     flex-wrap: wrap;
     
 }
-#img1{
+.img_1{
     background-image: url(./nkar/nkar1.jpg);
     width: 200px;
     height: 243px;
 }
 
-#img2{
+.img_2{
     background-image: url(./nkar/nkar2.jpg);
     width: 200px;
     height: 243px;

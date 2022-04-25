@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import './victor.css';
+import styles from "./Victor.module.css";
 import Byurakan from "./byurakan";
 import {Route, Routes , useNavigate} from "react-router-dom";
-import { listChors, listChors1, listChors2, listEreq, listErku, listErku1, listErku2, listErku3, listHing, listMek, listMek1, listMek2, listMek3, listVec, listYot } from "./text";
+import { Text_EIGHT, Text_ELEVEN, Text_FIVE, Text_FIVTEEN, Text_FOUR, Text_FOURTEEN, Text_NINE, Text_ONE, Text_SEVEN, Text_SIX, Text_TEN, Text_THREE, 
+    Text_THRTHEEN, Text_TWO, Text_TWOELVE, LIST_SIX_ARR , LIST_SEVEN_MAP} from "./const.js";
 
 
 
@@ -10,9 +11,9 @@ function Victor(){
     const navigate = useNavigate()
    return( 
 <>
-       <h1 id="title">Վիկտոր Համբարձումյան</h1>
-<div className="header">
-    <div id="img1"></div>
+       <h1 className={styles.anunAzganun}>Վիկտոր Համբարձումյան</h1>
+<div className={styles.headEr}>
+    <div className={styles.img_1}></div>
         
             <div>
           <ul>
@@ -52,11 +53,11 @@ function Victor(){
 
 function ListOne(){
     return(
-        <div className="list">
-                {listMek} <br/>
-                {listMek1} <br/>
-                {listMek2} <br/>
-                {listMek3}
+        <div className={styles.list}>
+                {Text_ONE} <br/>
+                {Text_TWO} <br/>
+                {Text_THREE} <br/>
+                {Text_FOUR}
         </div>
         
     );
@@ -65,11 +66,11 @@ function ListOne(){
 function ListTwo(){
     return(
     
-           <div className="list">
-            {listErku} <br/>
-            {listErku1} <br/>
-            {listErku2} <br/>
-            {listErku3}
+           <div className={styles.list}>
+            {Text_FIVE} <br/>
+            {Text_SIX} <br/>
+            {Text_SEVEN} <br/>
+            {Text_EIGHT}
             
             
             </div>
@@ -78,19 +79,19 @@ function ListTwo(){
 
 function ListThree(){
     return(
-        <div className="list">
-            {listEreq}
+        <div className={styles.list}>
+            {Text_NINE}
         </div>
     );
 
 }
 function ListFour(){
     return(
-        <div className="list">
-            {listChors}
-            <div className="xosq">
-                {listChors1} <br/>
-                {listChors2}
+        <div className={styles.list}>
+            {Text_TEN}
+            <div className={styles.xosq}>
+                {Text_ELEVEN} <br/>
+                {Text_TWOELVE}
             </div>
         </div>
     );
@@ -98,32 +99,23 @@ function ListFour(){
 }
 function ListFive(){
     return(
-        <div className="list">
-            {listHing}
+        <div className={styles.list}>
+            {Text_THRTHEEN}
         </div>
     );
 
 }
 function ListSix(){
+    
     return(
-        <div className="list">
-            {listVec}
-            <ul style={{padding: '15px', margin: '15px 150px',}}>
-                <li>1. Ավստրիայի գիտությունների ակադեմիա</li>
-                <li>2. Ադրբեջանի ԽՍՀ գիտությունների ակադեմիա</li>
-                <li>3. Բելգիայի գիտությունների ակադեմիա</li>
-                <li>4. Բուլղարիայի գիտությունների ակադեմիա (1974)</li>
-                <li>5. Գերմանիայի դեմոկրատական հանրապետության գիտությունների ակադեմիա</li>
-                <li>6. Վրաստանի գիտությունների ակադեմիա</li>
-                <li>7. Դանիայի գիտությունների ակադեմիա</li>
-                <li>8. Իտալիայի գիտությունների ակադեմիա</li>
-                <li>9. Լոնդոնի թագավորական ընկերություն</li>
-                <li>10. Նիդեռլանդների գիտությունների ակադեմիա</li>
-                <li>11. Ամերիկյան աստղագիտական ընկերություն</li>
-                <li>12. Քեմբրիջի փիլիսոփայական ընկերություն</li>
-                <li>13. Լա-Պլատայի համալսարան</li>
-                <li>14. Փարիզի համալսարան</li>
-                <li>15. Նիկոլայ Կոպեռնիկոսի անվան Տորունի համալսարան</li>
+        <div className={styles.list}>
+            {Text_FOURTEEN}
+            
+            <ul className={styles.list_ul_1}>
+                {LIST_SIX_ARR.map((el, index)=>{
+                   return <li key={index}>{el}</li>
+                })}
+                
             </ul>
         </div>
     );
@@ -131,29 +123,13 @@ function ListSix(){
 }
 function ListSeven(){
     return(
-        <div className="list">
-            <ul style={{padding: '15px', margin: '15px 130px',}}>
-                <li>Հայաստանի ազգային հերոս </li>
-                <li>Սոցիալիստական աշխատանքի կրկնակի հերոս </li>
-                <li>Երկրորդ աստիճանի Ստալինյան մրցանակ </li>
-                <li>Ստալինյան առաջին աստիճանի մրցանակ (1974)</li>
-                <li>Ռուսաստանի Դաշնության պետական մրցանակ</li>
-                <li>Հայաստանի ԽՍՀ պետական մրցանակ </li>
-                <li>Հինգ Լենինի շքանշան</li>
-                <li>Հոկտեմբերյան հեղափոխության շքանշան</li>
-                <li>Աշխատանքային Կարմիր դրոշի երկու շքանշան</li>
-                <li>Պատվո շքանշան</li>
-                <li>«Աշխատանքային արիության համար» մեդալ </li>
-                <li>Լեհաստանի Հանրապետության Վաստակի շքանշանի կոմանդոր</li>
-                <li>Հայաստանի ԽՍՀ գիտության վաստակավոր գործիչ </li>
-                <li>Ֆրանսիական աստղագիտական ընկերության Ժյուլ Ժանսենի մրցանակ</li>
-                <li>Վրաստանի ԽՍՀ գիտության վաստակավոր գործիչ</li>
-                <li>ԽՍՀՄ գիտությունների ակադեմիայի Վավիլովի անվան ոսկե մեդալ</li>
-                <li>Սլովակիայի գիտությունների ակադեմիայի ոսկե մեդալ </li>
-                <li>ԽՍՀՄ գիտությունների ակադեմիայի Լոմոնոսովի անվան մեծ ոսկե մեդալ </li>
-                <li>Բեռլինում Գերմանիայի գիտությունների ակադեմիայի Հելմհոլցի անվան ոսկե մեդալ</li>
+        <div className={styles.list}>
+            <ul className={styles.list_ul_2}>
+            {LIST_SEVEN_MAP.map((el, index)=>{
+                return <li key={index}>{el}</li>
+            })}
             </ul>
-            {listYot}
+            {Text_FIVTEEN}
         </div>
     );
 
