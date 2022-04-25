@@ -1,7 +1,7 @@
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Victor from "./components/anna/glxavor";
 import Charents from "./components/Christine/Charents";
-import Sahyan from "./components/rima/Sahyan";
+import Sahyan from "./components/rima/Home";
 import Sevak from "./components/artur";
 import Mecarenc from "./components/styop";
 // inch vor ban

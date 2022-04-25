@@ -1,8 +1,9 @@
 import React from 'react'
-import './Kensagrutyun.css';
+import { useNavigate } from 'react-router-dom'
+import styles from './styles/sahyan.module.scss'
 
 function Kensagrutyun() {
-  
+  const navigate = useNavigate
   const about = <div>
     <h1>Կենսագրություն</h1>
   <p><i>
@@ -25,14 +26,16 @@ function Kensagrutyun() {
 
   return (
   <>
-  <div className='container'>
-  <div className='parent'>
-    <div className='child'>
-    <div className='child1'></div>
-    <div className='child2'>{about}</div>
+  <div className={styles.parent}>
+ 
+    <div className={styles.child}>
+ 
+<div className={styles.left} ><a href='/sahyan'><i class="fa-solid fa-circle-arrow-left" ></i></a></div>
+    <div className={styles.child1}></div>
+    <div className={styles.child2}>{about}</div>
+ <div className={styles.right}><a href='grakanGorcuneutyun/*'><i class="fa-solid fa-circle-arrow-right"></i></a></div>
     </div>
   </div>
-</div>
   </>
   )
 }
