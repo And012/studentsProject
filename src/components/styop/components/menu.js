@@ -1,6 +1,6 @@
 import { useState } from "react"
 import {useNavigate } from 'react-router-dom'
-import { arrimg,norut} from "../text"
+import { arrimg,norut,norut2} from "../text"
 
 
 
@@ -47,7 +47,20 @@ export function Qaxaqakanutyun(){
                      }
                     }}><i class="fa-solid fa-angle-right"></i></a>
             </div>
-            <div className="slayder-content-right"></div>
+            <div className="slayder-content-right">
+             {norut2.map(([images,vern,texts],index) =>{
+                  return  <a href='' className="libs">
+                      <div key={index} className='slayder-content-left-content'>
+                      <div style={{backgroundImage:`url('${images}')`}} className="imgnorut"></div>
+                      <div className="lists-content-slayd" >
+                          <h5>{vern}</h5>
+                          <p>{texts}</p>
+                      </div>
+                  </div>
+                  </a>
+              })}
+
+            </div>
         </div>
         </section>
     </div>
