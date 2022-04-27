@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: #dbb896;
 }
 ul, li{
     list-style: none;
@@ -21,6 +22,7 @@ a{
     text-decoration: none;
     font-size: 25px;
     cursor: pointer;
+    margin-top: 10px;
 }
 .forMore{
     font-size: 15px;
@@ -31,7 +33,7 @@ a{
 .anunAzganun{
 display: flex;
 justify-content: center;
-margin-top: 20px;
+margin-top: 10px;
  
 }
 
@@ -53,8 +55,9 @@ margin-top: 20px;
 
 .img_2{
     background-image: url(./nkar/nkar2.jpg);
-    width: 200px;
-    height: 243px;
+    width: 1024px;
+    height: 683px;
+    margin: 30px auto;
 }
 a:hover{
     border-bottom: 1px solid black;
@@ -71,4 +74,13 @@ a:hover{
     font-size: 20px;
     padding: 30px;
     margin: 30px;
+}
+.navigateCank{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 20px;
+    align-items: center;
+    padding: 10px;
+    margin: 20px 10px ;
 }
