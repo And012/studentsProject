@@ -21,41 +21,42 @@ import {
   LIST_SEVEN_MAP,
   ARR_NAVIGATE,
 } from "./const.js";
+import Material from "./Material";
 
 function Victor_Glxavor() {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
-      <>
-      
+    <>
       <div className={styles.navigateCank}>
-          <ul>
-            {ARR_NAVIGATE.map(([el1, el2], index) => {
-              return (
-                <li key={index}>
-                  <a
-                    onClick={() => {
-                      navigate(el2);
-                    }}
-                  >
-                    {el1}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-          <a hraf=''> ??</a>
-        </div>
-    <Routes>
-      <Route path="/" element={<Victor />} />
-      <Route path="mek" element={<ListOne />} />
-      <Route path="erku" element={<ListTwo />} />
-      <Route path="ereq" element={<ListThree />} />
-      <Route path="chors" element={<ListFour />} />
-      <Route path="hing" element={<ListFive />} />
-      <Route path="vec" element={<ListSix />} />
-      <Route path="yot" element={<ListSeven />} />
-      <Route path="byurakan" element={<Byurakan />} />
-    </Routes>
+        <ul>
+          {ARR_NAVIGATE.map(([el1, el2], index) => {
+            return (
+              <li key={index}>
+                <a
+                  onClick={() => {
+                    navigate(el2);
+                  }}
+                >
+                  {el1}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+        <a hraf=""> ??</a>
+      </div>
+      <Routes>
+        <Route path="/" element={<Victor />} />
+        <Route path="mek" element={<ListOne />} />
+        <Route path="erku" element={<ListTwo />} />
+        <Route path="ereq" element={<ListThree />} />
+        <Route path="chors" element={<ListFour />} />
+        <Route path="hing" element={<ListFive />} />
+        <Route path="vec" element={<ListSix />} />
+        <Route path="yot" element={<ListSeven />} />
+        <Route path="byurakan" element={<Byurakan />} />
+        <Route path="material" element={<Material />} />
+      </Routes>
     </>
   );
 }
@@ -98,11 +99,11 @@ function ListTwo() {
 }
 
 function ListThree() {
-    return(
-  <>
-    <div className={styles.list}>{Text_NINE}</div>
-  </>
-    );
+  return (
+    <>
+      <div className={styles.list}>{Text_NINE}</div>
+    </>
+  );
 }
 function ListFour() {
   return (
