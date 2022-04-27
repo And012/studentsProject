@@ -1,10 +1,10 @@
 import { Route, Routes, useNavigate } from "react-router-dom";
-import Victor from "./components/anna/glxavor";
+import Victor_Glxavor from "./components/anna/glxavor";
 import Charents from "./components/Christine/Charents";
 import Sahyan from "./components/rima/Home";
 import Sevak from "./components/artur";
 import Mecarenc from "./components/styop";
-// inch vor ban
+
 const arr = [
   { name: "charenc", path: "charenc" },
   { name: "viktor hambardzumyan", path: "viktor" },
@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route path="/" element={<div>this is main component</div>} />
         <Route path="charenc/*" element={<Charents />} />
-        <Route path="viktor/*" element={<Victor />} />
+        <Route path="viktor/*" element={<Victor_Glxavor />} />
         <Route path="sahyan/*" element={<Sahyan />} />
         <Route path="sevak/*" element={<Sevak />} />
         <Route path="misak/*" element={<Mecarenc />} />
