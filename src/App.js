@@ -1,5 +1,5 @@
 import { Route, Routes, useNavigate } from "react-router-dom";
-import Victor_Glxavor from "./components/anna/glxavor";
+import Victor_Glxavor from "./components/anna/Material.js";
 import Charents from "./components/Christine/Charents";
 import Sahyan from "./components/rima/Home";
 import Sevak from "./components/artur";

@@ -1,38 +1,37 @@
+import { Route, Routes, useNavigate } from "react-router-dom";
 import styles from "./Victor.module.css";
 import Byurakan from "./byurakan";
-import { Route, Routes, useNavigate } from "react-router-dom";
 import {
-  Text_EIGHT,
-  Text_ELEVEN,
-  Text_FIVE,
-  Text_FIVTEEN,
-  Text_FOUR,
-  Text_FOURTEEN,
-  Text_NINE,
-  Text_ONE,
-  Text_SEVEN,
-  Text_SIX,
-  Text_TEN,
-  Text_THREE,
-  Text_THRTHEEN,
-  Text_TWO,
-  Text_TWOELVE,
-  LIST_SIX_ARR,
+  ABOUT_SIENCE,
+  BEEING_AUTHER,
+  BIOGRAFY,
+  COMUNIST_MEMBER,
+  EDUCATION,
+  LITTLE_PLANET,
+  LONDON_COMPANY,
+  MEMBERS,
+  SIENCE_ACADEMY,
+  SINCE,
+  SPEACH,
+  SPEACH_FIRST,
+  SPEACH_SECOND,
+  STAR_SYSTEM_FIRST,
+  STAR_SYSTEM_SECOND,
   LIST_SEVEN_MAP,
-  ARR_NAVIGATE,
+  LIST_SIX_MAP,
+  ARR_NAVIGATE
 } from "./const.js";
-import Material from "./Material";
 
-function Victor_Glxavor() {
+function Victor_Himnakan() {
   const navigate = useNavigate();
   return (
     <>
-      <div className={styles.navigateCank}>
-        <ul>
+      <div className={styles.navigateList}>
+        <ul className={styles.my_ul}>
           {ARR_NAVIGATE.map(([el1, el2], index) => {
             return (
-              <li key={index}>
-                <a
+              <li className={styles.my_li} key={index}>
+                <a className={styles.my_a_teg}
                   onClick={() => {
                     navigate(el2);
                   }}
@@ -43,19 +42,18 @@ function Victor_Glxavor() {
             );
           })}
         </ul>
-        <a hraf=""> ??</a>
+        <a className={styles.letsPlay} hraf=""> Արի խաղանք</a>
       </div>
       <Routes>
         <Route path="/" element={<Victor />} />
-        <Route path="mek" element={<ListOne />} />
-        <Route path="erku" element={<ListTwo />} />
-        <Route path="ereq" element={<ListThree />} />
-        <Route path="chors" element={<ListFour />} />
-        <Route path="hing" element={<ListFive />} />
-        <Route path="vec" element={<ListSix />} />
-        <Route path="yot" element={<ListSeven />} />
+        <Route path="biografy" element={<BIO />} />
+        <Route path="eduacation" element={<EDU />} />
+        <Route path="pedagog" element={<PEDAGOG />} />
+        <Route path="activity" element={<ACTIVITY />} />
+        <Route path="politics" element={<POLITICL />} />
+        <Route path="sience" element={<SIENCE />} />
+        <Route path="reword" element={<REWORDS />} />
         <Route path="byurakan" element={<Byurakan />} />
-        <Route path="material" element={<Material />} />
       </Routes>
     </>
   );
@@ -72,87 +70,88 @@ function Victor() {
   );
 }
 
-function ListOne() {
+function BIO() {
   return (
     <>
       <div className={styles.list}>
-        {Text_ONE} <br />
-        {Text_TWO} <br />
-        {Text_THREE} <br />
-        {Text_FOUR}
+        {BIOGRAFY} <br />
+        {EDUCATION} <br />
+        {ABOUT_SIENCE} <br />
+        {MEMBERS}
       </div>
     </>
   );
 }
 
-function ListTwo() {
+function EDU() {
   return (
     <>
       <div className={styles.list}>
-        {Text_FIVE} <br />
-        {Text_SIX} <br />
-        {Text_SEVEN} <br />
-        {Text_EIGHT}
+        {LONDON_COMPANY} <br />
+        {SPEACH} <br />
+        {STAR_SYSTEM_FIRST} <br />
+        {STAR_SYSTEM_SECOND}
       </div>
     </>
   );
 }
 
-function ListThree() {
+function PEDAGOG() {
   return (
     <>
-      <div className={styles.list}>{Text_NINE}</div>
+      <div className={styles.list}>{BEEING_AUTHER}</div>
     </>
   );
 }
-function ListFour() {
+function ACTIVITY() {
   return (
     <>
       <div className={styles.list}>
-        {Text_TEN}
+        {SINCE}
         <div className={styles.xosq}>
-          {Text_ELEVEN} <br />
-          {Text_TWOELVE}
+          {SPEACH_FIRST} <br />
+          {SPEACH_SECOND}
         </div>
       </div>
     </>
   );
 }
-function ListFive() {
+function POLITICL() {
   return (
     <>
-      <div className={styles.list}>{Text_THRTHEEN}</div>
+      <div className={styles.list}>{COMUNIST_MEMBER}</div>
     </>
   );
 }
-function ListSix() {
+function SIENCE() {
   return (
     <>
       <div className={styles.list}>
-        {Text_FOURTEEN}
+        {SIENCE_ACADEMY}
 
         <ul className={styles.list_ul_1}>
-          {LIST_SIX_ARR.map((el, index) => {
-            return <li key={index}>{el}</li>;
+          {LIST_SIX_MAP.map((el, index) => {
+            return <li className={styles.my_li} key={index}>{el}</li>;
           })}
         </ul>
       </div>
     </>
   );
 }
-function ListSeven() {
+function REWORDS() {
   return (
     <>
       <div className={styles.list}>
         <ul className={styles.list_ul_2}>
           {LIST_SEVEN_MAP.map((el, index) => {
-            return <li key={index}>{el}</li>;
+            return <li className={styles.my_li} key={index}>{el}</li>;
           })}
         </ul>
-        {Text_FIVTEEN}
+        {LITTLE_PLANET}
       </div>
     </>
   );
 }
 
-export default Victor_Glxavor;
+export {Victor_Himnakan};
+
