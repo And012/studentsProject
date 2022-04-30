@@ -7,13 +7,13 @@
 .list_ul_1{
     padding: 15px;
     list-style: none;
-    margin: 15px 150px;
+    margin: 15px ;
 
 }
 .list_ul_2{
     padding: 15px;
     list-style: none;
-    margin: 15px 130px;
+    margin: 15px ;
 }
 
 .my_a_teg{
@@ -87,7 +87,7 @@ margin-top: 10px;
     display: flex;
     font-size: 20px;
     padding: 30px;
-    margin: 30px;
+    margin: 10px;
 }
 .navigateList{
     display: flex;
