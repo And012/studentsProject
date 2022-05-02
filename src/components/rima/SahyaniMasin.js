@@ -1,5 +1,9 @@
 import React from "react";
 import styles from "./styles/sahyan.module.scss";
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
+import { useNavigate } from "react-router-dom";
 
 function SahyaniMasin() {
   const about5 = (
@@ -63,6 +67,7 @@ function SahyaniMasin() {
   );
   return (
     <>
+    <AccessibleTabs1 />
       <div className={styles.parent5}>
         <div className={styles.parent5_child1}>
           <div className={styles.left}>
@@ -82,4 +87,24 @@ function SahyaniMasin() {
   );
 }
 
+function AccessibleTabs1() {
+  const navigate = useNavigate()
+const [value, setValue] = React.useState(0);
+const handleChange = (event, newValue) => {
+  setValue(newValue);
+};
+return (
+  <Box sx={{ width: '100%' }}>
+    <Tabs
+      onChange={handleChange}
+      value={value}
+      aria-label="Tabs where selection follows focus"
+      selectionFollowsFocus
+    >
+      <Tab label="Գլխավոր էջ" onClick={()=> navigate("/sahyan")}/>
+    </Tabs>
+    
+  </Box>
+);
+}
 export default SahyaniMasin;

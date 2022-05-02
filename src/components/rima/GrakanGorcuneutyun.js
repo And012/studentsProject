@@ -1,7 +1,12 @@
 import React from "react";
 import styles from "./styles/sahyan.module.scss";
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
+import { useNavigate } from "react-router-dom";
 
 function GrakanGorcuneutyun() {
+  const navigate = useNavigate()
   const about2 = (
     <div>
       <h1>Գրական գործունեություն</h1>
@@ -54,11 +59,12 @@ function GrakanGorcuneutyun() {
   );
   return (
     <>
+    <AccessibleTabs1 />
       <div className={styles.parent2}>
         <div className={styles.left}>
-          <a href="kensagrutyun">
+          <div onClick={()=> navigate("kensagrutyun")}>
             <i class="fa-solid fa-circle-arrow-left"></i>
-          </a>
+          </div>
         </div>
 
         <div className={styles.child_1}>{about2}</div>
@@ -72,4 +78,24 @@ function GrakanGorcuneutyun() {
   );
 }
 
+function AccessibleTabs1() {
+  const navigate = useNavigate()
+const [value, setValue] = React.useState(0);
+const handleChange = (event, newValue) => {
+  setValue(newValue);
+};
+return (
+  <Box sx={{ width: '100%' }}>
+    <Tabs
+      onChange={handleChange}
+      value={value}
+      aria-label="Tabs where selection follows focus"
+      selectionFollowsFocus
+    >
+      <Tab label="Գլխավոր էջ" onClick={()=> navigate("/sahyan")}/>
+    </Tabs>
+    
+  </Box>
+);
+}
 export default GrakanGorcuneutyun;

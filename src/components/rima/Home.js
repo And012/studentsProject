@@ -6,17 +6,16 @@ import Banastexcutyunner from "./Banastexcutyunner";
 import SahyaniMasin from "./SahyaniMasin";
 import Hishatak from "./Hishatak";
 import styles from "./styles/sahyan.module.scss";
-
 function Sahyan() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Info />} />
-        <Route path="kensagrutyun/*" element={<Kensagrutyun />} />
-        <Route path="grakanGorcuneutyun/*" element={<GrakanGorcuneutyun />} />
-        <Route path="banastexcutyunner/*" element={<Banastexcutyunner />} />
-        <Route path="sahyaniMasin/*" element={<SahyaniMasin />} />
-        <Route path="hishatak/*" element={<Hishatak />} />
+        <Route path="kensagrutyun" element={<Kensagrutyun />} />
+        <Route path="grakanGorcuneutyun/" element={<GrakanGorcuneutyun />} />
+        <Route path="banastexcutyunner" element={<Banastexcutyunner />} />
+        <Route path="sahyaniMasin" element={<SahyaniMasin />} />
+        <Route path="hishatak" element={<Hishatak />} />
       </Routes>
     </>
   );
@@ -63,7 +62,6 @@ function Info() {
   return (
     <>
       <div className={styles.container}>
-        {/* <div className={styles.error}></div> */}
         <section className={styles.items}>
           <div className={styles.item_1}>
             <h2>Համո Սահյան</h2>
@@ -97,6 +95,7 @@ function Info() {
           </div>
         </section>
       </div>
+      {/* <div className={styles.footer}></div> */}
     </>
   );
 }

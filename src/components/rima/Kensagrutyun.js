@@ -1,15 +1,24 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./styles/sahyan.module.scss";
+import { useSelector, useDispatch } from "react-redux";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Box from "@mui/material/Box";
 
 function Kensagrutyun() {
+  const info = useSelector((state) => {
+    return state.firstState.info;
+  });
+
   const navigate = useNavigate;
   const about = (
     <div>
       <h1>Կենսագրություն</h1>
       <p>
         <i>
-          Համո Սահյանը ծնվել է 1914 թվականի ապրիլի 14-ին Սիսիանի շրջանի (այժմ՝
+          {info}
+          {/* Համո Սահյանը ծնվել է 1914 թվականի ապրիլի 14-ին Սիսիանի շրջանի (այժմ՝
           Սյունիքի մարզ) Լոր գյուղում։ Սահյանը սկզբնական կրթությունը ստացել է
           տեղի դպրոցում, որտեղ իբրև ուսուցիչ աշխատել էին բանաստեղծներ Գառնիկ
           Քալաշյանը և Ակսել Բակունցը։ 1927 թվականին Հ. Սահյանը տեղափոխվել է
@@ -22,14 +31,15 @@ function Kensagrutyun() {
           նրա տանը։ Հենց Զորյանի օգնությամբ է Սահյանը ստեղծել իր առաջին գիրքը՝
           «Որոտանի եզերքին» վերնագրով։ 1965-1967 թվականներին եղել է «Գրական
           թերթ»-ի գլխավոր խմբագիրը։ Մահացել է 1993 թվականի հուլիսի 17-ին
-          Երևանում։ Նրա աճյունը տեղ է գտել Կոմիտասի անվան պանթեոնում։
-        </i>{" "}
+          Երևանում։ Նրա աճյունը տեղ է գտել Կոմիտասի անվան պանթեոնում։ */}
+        </i>
       </p>
     </div>
   );
 
   return (
     <>
+      {/* <AccessibleTabs1 /> */}
       <div className={styles.parent}>
         <div className={styles.child}>
           <div className={styles.left}>
@@ -50,4 +60,23 @@ function Kensagrutyun() {
   );
 }
 
+// function AccessibleTabs1() {
+//   const navigate = useNavigate();
+//   const [value, setValue] = React.useState(0);
+//   const handleChange = (event, newValue) => {
+//     setValue(newValue);
+//   };
+//   return (
+//     <Box sx={{ width: "100%" }}>
+//       <Tabs
+//         onChange={handleChange}
+//         value={value}
+//         aria-label="Tabs where selection follows focus"
+//         selectionFollowsFocus
+//       >
+//         <Tab label="Գլխավոր էջ" onClick={() => navigate("/sahyan")} />
+//       </Tabs>
+//     </Box>
+//   );
+// }
 export default Kensagrutyun;

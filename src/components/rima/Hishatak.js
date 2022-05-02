@@ -1,5 +1,9 @@
 import React from "react";
 import styles from "./styles/sahyan.module.scss";
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Box from '@mui/material/Box';
+import { useNavigate } from "react-router-dom";
 
 function Hishatak() {
   const about4 = (
@@ -25,6 +29,7 @@ function Hishatak() {
   );
   return (
     <>
+    <AccessibleTabs1 />
       <div className={styles.parent4}>
         <div className={styles.left}>
           <a href="sahyaniMasin">
@@ -42,5 +47,27 @@ function Hishatak() {
     </>
   );
 }
+function AccessibleTabs1() {
+  const navigate = useNavigate()
+const [value, setValue] = React.useState(0);
+const handleChange = (event, newValue) => {
+  setValue(newValue);
+};
+
+return (
+  <Box sx={{ width: '100%' }}>
+    <Tabs
+      onChange={handleChange}
+      value={value}
+      aria-label="Tabs where selection follows focus"
+      selectionFollowsFocus
+    >
+      <Tab label="Գլխավոր էջ" onClick={()=> navigate("/sahyan")}/>
+    </Tabs>
+    
+  </Box>
+);
+}
+
 
 export default Hishatak;
