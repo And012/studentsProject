@@ -1,26 +1,32 @@
-/* *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background-color: #dbb896;
+.my_ul{
+    list-style: none;
 }
-ul, li{
+.my_li{
     list-style: none;
 }
 .list_ul_1{
     padding: 15px;
-    margin: 15px 150px;
+    list-style: none;
+    margin: 15px ;
 
 }
 .list_ul_2{
     padding: 15px;
-    margin: 15px 130px;
+    list-style: none;
+    margin: 15px ;
 }
 
-a{
+.my_a_teg{
     color: black;
     text-decoration: none;
     font-size: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.letsPlay{
+    color: rgb(247, 71, 97);
+    text-decoration: none;
+    font-size: 20px;
     cursor: pointer;
     margin-top: 10px;
 }
@@ -47,6 +53,14 @@ margin-top: 10px;
     flex-wrap: wrap;
     
 }
+.cardDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
 .img_1{
     background-image: url(./nkar/nkar1.jpg);
     width: 200px;
@@ -59,7 +73,7 @@ margin-top: 10px;
     height: 683px;
     margin: 30px auto;
 }
-a:hover{
+.my_a_teg:hover{
     border-bottom: 1px solid black;
 }
 .list{
@@ -73,9 +87,9 @@ a:hover{
     display: flex;
     font-size: 20px;
     padding: 30px;
-    margin: 30px;
+    margin: 10px;
 }
-.navigateCank{
+.navigateList{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,4 +97,4 @@ a:hover{
     align-items: center;
     padding: 10px;
     margin: 20px 10px ;
-} */
+}
