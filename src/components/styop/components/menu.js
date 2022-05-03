@@ -3,7 +3,8 @@ import {useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { ARRIMG,news1,news2} from "../constant"
 import {useDispatch, useSelector} from 'react-redux'
-import { setData } from "../../../store/rootReducer"
+import { setData,setName,setRemove } from "../../../store/rootReducer"
+
 
 
 export default function Menu(){
@@ -75,17 +76,31 @@ export function Tntesutyun(){
         </div>
 }
 export function Hasarakutyun(){
-    // const dispatch = useDispatch()
+         const dispatch = useDispatch()
+         const data = useSelector((state) => state.Mecarenc.data)
     return <section className="Hasarakutyun">
-        <h2>Hasarakutyun</h2>
+        <h2>Հասարակություն</h2>
+        <div className="Hasarakutyun-content">
+            <h3>Կորոնավիրուսով վարակված երկներ</h3>
         <button onClick={() =>{
-            // axios.get("https://api.covid19api.com/countries")
-            // .then(response =>{
-            //   dispatch(setData(response.data))
-            //   console.log(response)
-            // })
-       }}>sing in</button>
+            axios.get("https://api.covid19api.com/countries")
+            .then(response =>{
+              dispatch(setData(response.data))
+            })
+       }}>Սեղմիր... </button>
+       <button onClick={() =>{
+          dispatch(setRemove()) 
+       }}>Ջնջել</button>
+       </div>
+       <div className="covid19">
+        {data?.map((el,index) => {
+            return<div key={index} className='covid19-content'>
+                    <ul><li>{el.Country + ","}</li></ul> 
+                </div>
+        })}
+        </div>
         </section>
+       
 }
 export function Mshakuyt(){
     return<div>Mshakuyt</div>

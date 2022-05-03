@@ -1,20 +1,26 @@
 import { combineReducers, createSlice } from "@reduxjs/toolkit";
 
 export const globalState = createSlice({
-  name: "globalName",
+  name: "Mecarenc",
   initialState: {
     name: "Mecarenc",
-    data: null
+    data: null,
   },
   reducers: {
     setData:(state,{payload})=>{
       state.data = payload
+    },
+    setName:(state,{payload})=>{
+      state.name = payload
+    },
+    setRemove:(state,{payload})=>{
+      state.data = null
     }
   },
 });
 
 export const rootReducer = combineReducers({
-  globalName: globalState.reducer,
+  Mecarenc: globalState.reducer,
 });
 
-export const {setData} = globalState.actions
+export const {setData,setName,setRemove} = globalState.actions
