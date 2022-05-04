@@ -42,7 +42,6 @@ function Victor_Himnakan() {
             );
           })}
         </ul>
-        <a className={styles.letsPlay} hraf=""> Արի խաղանք</a>
       </div>
       <Routes>
         <Route path="/" element={<Victor />} />

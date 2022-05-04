@@ -23,13 +23,6 @@
     cursor: pointer;
     margin-top: 10px;
 }
-.letsPlay{
-    color: rgb(247, 71, 97);
-    text-decoration: none;
-    font-size: 20px;
-    cursor: pointer;
-    margin-top: 10px;
-}
 .forMore{
     font-size: 15px;
     justify-content: center;
@@ -52,6 +45,10 @@ margin-top: 10px;
     margin: 20px auto;
     flex-wrap: wrap;
     
+}
+.forMaterialPage{
+    display: flex;
+    flex-direction: column;
 }
 .cardDiv{
     display: flex;
@@ -97,4 +94,15 @@ margin-top: 10px;
     align-items: center;
     padding: 10px;
     margin: 20px 10px ;
+}
+.toMainPage{
+    text-decoration: none;
+    color: blue;
+    font-size: 30px;
+    margin: 30px auto;
+}
+.astxImage{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
