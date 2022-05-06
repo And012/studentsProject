@@ -262,18 +262,37 @@
    flex-wrap: wrap;
    display: flex;
    justify-content: space-between;
+   padding: 20px;
 }
 .covid19-content li{
     list-style: none;
     
 }
+.covid19-2{
+    height:400px ;
+    width: 50%;
+    overflow: hidden;
+    flex-wrap: wrap;
+    padding: 20px;
+ }
+ .list-covid19{
+    display: inline-block;
+ }
 .Hasarakutyun-content{
     padding: 20px;
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 
+}
+.Hasarakutyun-content input{
+    border-radius: 5px;
+    background-color: #a1a1a1;
+    padding: 5px;
+    border: 0;
+    outline: none;
+    color:rgb(7, 0, 0) ;
 }
 .Hasarakutyun-content button{
     width: 100px;
