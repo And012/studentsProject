@@ -97,6 +97,7 @@ export function Tntesutyun() {
   return <div>Tntesutyun</div>;
 }
 export function Hasarakutyun() {
+  const [value,setvalue] = useState('')
   const dispatch = useDispatch();
   const data = useSelector(selectorSome);
   return (
@@ -122,18 +123,29 @@ export function Hasarakutyun() {
         >
           Ջնջել
         </button>
+        <input value={value} onChange={(event) => setvalue(event.target.value)}/>
       </div>
-      <div className="covid19">
+     {!value && <div className="covid19">
         {data?.map((el, index) => {
           return (
             <div key={index} className="covid19-content">
               <ul>
                 <li>{el.Country + ","}</li>
               </ul>
-            </div>
+           </div>
           );
-        })}
-      </div>
+         })}
+      </div>}
+     {value && <div className="covid19-2">
+         {data?.map((el, index) => {
+          if(el.Country.toLowerCase().includes(value.toLowerCase())){
+          return (
+            <div key={index} className="list-covid19">
+               <span> {el.Country + ","}</span> 
+           </div>
+          );
+        } })}
+        </div> }
     </section>
   );
 }
