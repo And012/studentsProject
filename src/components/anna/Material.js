@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { Card } from "@mui/material";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -33,12 +33,16 @@ import {
   BYURAKAN_TEXT_2,
   BYURAKAN_TEXT_3,
 } from "./const.js";
+import { Victor_Himnakan } from "./glxavor";
+import AstxaSpyur from "./astxaspyur";
 
 export default function Victor_Glxavor() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Card_Function />} />
+        <Route path="viklist/*" element={<Victor_Himnakan/>} />
+        <Route path="astxaspyur/*" element={<AstxaSpyur/>} />
       </Routes>
     </>
   );
@@ -53,6 +57,7 @@ function Card_Function() {
   const [open5, setOpen5] = useState(false);
   const [open6, setOpen6] = useState(false);
   const [open7, setOpen7] = useState(false);
+  const navigate = useNavigate()
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -101,7 +106,16 @@ function Card_Function() {
   const handleClickClose7 = () => {
     setOpen7(false);
   };
+
   return (
+    <div className={styles.forMaterialPage}>
+      <div className={styles.toMainPage}><Button size="large" variant="text" onClick={
+        ()=>navigate('viklist')
+      }>ԳԼԽԱՎՈՐ ԷՋ</Button>
+      <Button size="large" variant="text" onClick={
+        ()=>navigate('astxaspyur')
+      }>ԱՍՏՂԱՍՓՅՈՒՌՆԵՐ</Button>
+      </div>
     <div className={styles.cardDiv}>
       <Card sx={{ maxWidth: 345, margin: "10px" }}>
         <CardMedia
@@ -184,7 +198,7 @@ function Card_Function() {
           component="img"
           alt="Viktor Hambardzumyan"
           height="140"
-          image="https://yn.am/disc/05-02-16/86755f93c43809639a9ef71b47d83be0.jpg"
+          image="https://www.1tv.am/images/video/6/29598/02.jpeg"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -254,7 +268,7 @@ function Card_Function() {
           component="img"
           alt="Viktor Hambardzumyan"
           height="140"
-          image="https://yn.am/disc/05-02-16/86755f93c43809639a9ef71b47d83be0.jpg"
+          image="https://www.1tv.am/images/video/6/29598/02.jpeg"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -332,7 +346,7 @@ function Card_Function() {
           component="img"
           alt="Viktor Hambardzumyan"
           height="140"
-          image="https://yn.am/disc/05-02-16/86755f93c43809639a9ef71b47d83be0.jpg"
+          image="https://www.1tv.am/images/video/6/29598/02.jpeg"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -406,6 +420,7 @@ function Card_Function() {
           </Dialog>
         </CardActions>
       </Card>
+    </div>
     </div>
   );
   }
