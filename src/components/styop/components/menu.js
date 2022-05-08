@@ -13,10 +13,7 @@ export default function Menu() {
 export function Qaxaqakanutyun() {
   const navigate = useNavigate();
   const [index, setindex] = useState(0);
-  const norutyunhref = [
-    ["https://www.youtube.com/watch?v=93wAfYyD7NI&t=11s"],
-    [],
-  ];
+
   return (
     <div>
       <section className="Qaxaqakanutyun">
@@ -114,7 +111,7 @@ export function Hasarakutyun() {
               });
           }}
         >
-          Սեղմիր...{" "}
+          Սեղմիր...
         </button>
         <button
           onClick={() => {

@@ -2,7 +2,7 @@ import { combineReducers, createSlice } from "@reduxjs/toolkit";
 import {astxaStateSlice} from "../components/anna/astxaState"
 
 export const globalState = createSlice({
-  name: "globalName",
+  name: "Mecarenc",
   initialState: {
     name: "Mecarenc",
     data: null
@@ -10,13 +10,19 @@ export const globalState = createSlice({
   reducers: {
     setData:(state,{payload})=>{
       state.data = payload
-    }
+    },
+    setName :(state,{payload})=>{
+      state.name = payload
+    },
+    setRemove:(state,{payload})=>{
+      state.data = null
+    },
   },
 });
 
 export const rootReducer = combineReducers({
-  globalName: globalState.reducer,
+  Mecarenc: globalState.reducer,
   astxaState: astxaStateSlice.reducer,
 });
 
-export const {setData} = globalState.actions
+export const {setData,setRemove,setName} = globalState.actions
