@@ -106,3 +106,10 @@ margin-top: 10px;
     flex-direction: row;
     justify-content: center;
 }
+.star_type{
+display: flex;
+flex-direction: row;
+gap: 30px;
+justify-content: center;
+padding: 20px;
+}
